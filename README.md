@@ -26,6 +26,13 @@ Brew package manager , install from website
 
 ## Installing `root`
 
+brew install root
+
 ## Installing `geant4`
 
+brew install geant4 --with-system-clhep --with-gdml --with-qt --without-example
+
+
 ## Installing `bdsim`
+
+ CMAKE_PREFIX_PATH=/usr/local/opt/flex:/usr/local/opt/bison:$CMAKE_PREFIX_PATH cmake ../bdsim

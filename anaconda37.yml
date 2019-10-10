@@ -17,6 +17,7 @@ dependencies:
   - anaconda
   - lmfit
   - mypy
+  - nb_conda_kernels
   - nbstripout
   - numpy-stl
   - parse
@@ -26,3 +27,4 @@ dependencies:
   - pyarrow
   - quaternion
   - typed-ast
+  - uproot

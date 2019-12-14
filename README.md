@@ -58,3 +58,16 @@ brew install geant4 --with-system-clhep --with-gdml --with-qt --without-example
 ## Installing `bdsim`
 
  CMAKE_PREFIX_PATH=/usr/local/opt/flex:/usr/local/opt/bison:$CMAKE_PREFIX_PATH cmake ../bdsim
+
+
+## Installing `freecad`
+
+cmake \
+  -DCMAKE_BUILD_TYPE="Release"   \
+  -DBUILD_QT5=1                  \
+  -DCMAKE_PREFIX_PATH="/usr/local/Cellar/qt/5.13.0/lib/cmake/"  \
+  -DFREECAD_USE_EXTERNAL_KDL=1   \
+  -DBUILD_FEM_NETGEN=1           \
+  -DFREECAD_CREATE_MAC_APP=1     \
+  -DCMAKE_INSTALL_PREFIX="./.."  \
+  -DBoost_NO_BOOST_CMAKE:BOOL=ON \

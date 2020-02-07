@@ -26,5 +26,7 @@ dependencies:
   - plotly
   - pyarrow
   - quaternion
+  - sphinx-rtd-theme
   - typed-ast
   - uproot
+  # conda install -c astropy sphinx-automodapi

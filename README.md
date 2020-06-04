@@ -71,3 +71,19 @@ cmake \
   -DFREECAD_CREATE_MAC_APP=1     \
   -DCMAKE_INSTALL_PREFIX="./.."  \
   -DBoost_NO_BOOST_CMAKE:BOOL=ON \
+
+## Installing `fluka` and `flair`
+
+Local installation of FLUKA:
+
+    –	git clone fluka
+    –	make
+
+Fluka and FLAIR in a Docker image:
+
+    –	install docker from https://docker.com (docker Desktop)
+    –	docker-fluka-flair in channel code-fluka
+    –	brew install socat
+    –	socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+    –	docker build --tag centos-flukaflair .
+    –	docker run -ti --rm -e DISPLAY=$(ipconfig getifaddr en0):0 -v /tmp/.X11-unix:/tmp/.X11-unix -v /Users/chernals/cernbox:/tmp/cernbox centos-flukaflair
